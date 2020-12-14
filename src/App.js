@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./layout/Header";
-//import Employee from "./component/employee/Employee"
+//import employees from "../src/utils/employees.json";
+
 import Table from "./layout/Table.js"
 
 function App() {
