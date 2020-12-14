@@ -8,7 +8,7 @@ const Table = employees.map((data ) => {
     
     return (
         <div>
-          <table>{[data].results.gender}</table>
+          <table>{data.results.gender}</table>
         </div>
     )
 }
