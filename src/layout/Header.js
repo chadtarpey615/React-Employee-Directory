@@ -13,7 +13,7 @@ function Header() {
 const styleHeader = {
 backgroundColor: "navy",
 margin: 'auto',
-padding: "2px",
+padding: "20px",
 textAlign: "center",
 color: "#fff"
 }

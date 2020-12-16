@@ -1,17 +1,26 @@
 import React from "react";
-import employees from "../utils/employees.json";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Wrapper from "../Wrapper/index";
+import "./table.css"
 
-const Table = employees.map((data ) => {
-    console.log(data)
-    //console.log(Array.from(data))
-    
+function Table(props) {
     return (
-        <div>
-          <table>{data.results.gender}</table>
-        </div>
+        <Wrapper>
+            <table className="table">
+                <tbody>
+                    <tr>
+                        <td className="col-sm-2"><img alt={props.name} src={props.image}></img></td>
+                        <td className="col-sm-2">{props.title}</td>
+                        <td className="col-sm-2">{props.phone}</td>
+                        <td className="col-sm-2">{props.email}</td>
+                        <td className="col-sm-2">{props.date}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </Wrapper>
     )
 }
-)
+
+
 
 export default Table;

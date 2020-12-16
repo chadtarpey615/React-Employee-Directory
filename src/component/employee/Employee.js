@@ -1,26 +1,32 @@
 import React, { Component } from "react";
-import employee from "../component/employee/employees.json"
-
-
+import employees from "../../utils/employees.json";
+import Wrapper from "../../Wrapper/index"
+import Table from "../../layout/Table";
 class Employee extends Component {
 
     state = {
-        employee: [
-            {
-                gender: ""
-                // image: "",
-                // name: "",
-                // title: "",
-                // dob: "",
-
-            }
-        ]
+        employees: employees.results
     }
-    render() {
-        return (
-            <div>
 
-            </div>
+    render() {
+        console.log(this.state.employees)
+        return (
+            <Wrapper>
+                {this.state.employees.map(employee => {
+                    return (
+                        <Table
+                            
+                            image={employee.picture.thumbnail}
+                            title={[employee.name.first,  employee.name.last]}
+                            phone={employee.cell}
+                            email={employee.email}
+                            date={employee.dob.date}
+                        />
+                    )
+
+
+                })}
+            </Wrapper>
         )
     }
 

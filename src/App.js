@@ -1,14 +1,18 @@
 import React from "react";
 import Header from "./layout/Header";
-//import employees from "../src/utils/employees.json";
+import Employee from "../src/component/employee/Employee";
+import TableHead from "./layout/TableHeader";
+import Search from "../src/component/Search"
 
-import Table from "./layout/Table.js"
+//import Table from "./layout/Table.js"
 
 function App() {
   return (
     <div>
     <Header />
-    <Table />
+    <Search />
+    <TableHead />
+    <Employee />
     </div>
   );
 }
