@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import employees from "../../utils/employees.json";
-import Wrapper from "../../Wrapper/index"
 import Table from "../../layout/Table";
-import TableHeader from "../../layout/TableHeader";
 
 class Employee extends Component {
 

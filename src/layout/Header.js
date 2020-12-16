@@ -1,21 +1,30 @@
 import React from "react";
 
-
 function Header() {
     return (
         <header style={styleHeader}>
-            <h1>Employee-Tracker</h1>
+            <h1 style={hStyle}>Employee-Tracker</h1>
         </header>
     )
 }
 
 
 const styleHeader = {
-backgroundColor: "navy",
+backgroundImage: 'url("../images/office.webp")',
+backgroundPosition: 'center',
+backgroundRepeat: 'no-repeat',
+backgroundSize: "cover",
 margin: 'auto',
-padding: "20px",
+padding: "60px",
 textAlign: "center",
-color: "#fff"
+color: "#fff",
+}
+
+const hStyle = {
+    fontSize: "80px"
 }
 
 export default Header;
+
+    
+
