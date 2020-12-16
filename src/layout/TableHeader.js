@@ -1,7 +1,7 @@
 import Wrapper from "../Wrapper/index"
 function TableHead(props) {
     return (
-        <Wrapper>
+        
             <table className="table">
                 <thead className="thead-dark">
                     <tr>
@@ -14,7 +14,7 @@ function TableHead(props) {
                     </tr>
                 </thead>
             </table>
-        </Wrapper>
+        
     )
 }
 

@@ -5,19 +5,17 @@ import "./table.css"
 
 function Table(props) {
     return (
-        <Wrapper>
-            <table className="table">
-                <tbody>
-                    <tr>
-                        <td className="col-sm-2"><img alt={props.name} src={props.image}></img></td>
-                        <td className="col-sm-2">{props.title}</td>
-                        <td className="col-sm-2">{props.phone}</td>
-                        <td className="col-sm-2">{props.email}</td>
-                        <td className="col-sm-2">{props.date}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </Wrapper>
+        
+            <tbody>
+                <tr>
+                    <td><img alt={props.name} src={props.image}></img></td>
+                    <td>{props.title}</td>
+                    <td>{props.phone}</td>
+                    <td><a href={props.email}>{props.email}</a></td>
+                    <td>{props.date}</td>
+                </tr>
+            </tbody>
+           
     )
 }
 
