@@ -9,12 +9,11 @@ import Wrapper from "./Wrapper";
 
 function App() {
   return (
-    <div>
+    <Wrapper>
     <Header />
-    <Search />
-    <TableHeader />
+    {/* <TableHeader /> */}
     <Employee />
-    </div>
+    </Wrapper>
   );
 }
 

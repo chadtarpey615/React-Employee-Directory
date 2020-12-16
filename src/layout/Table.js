@@ -9,7 +9,7 @@ function Table(props) {
             <tbody>
                 <tr>
                     <td><img alt={props.name} src={props.image}></img></td>
-                    <td>{props.title}</td>
+                    <td>{props.title[0]} {props.title[1]}</td>
                     <td>{props.phone}</td>
                     <td><a href={props.email}>{props.email}</a></td>
                     <td>{props.date}</td>

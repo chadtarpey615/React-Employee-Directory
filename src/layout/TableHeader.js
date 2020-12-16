@@ -1,4 +1,4 @@
-import Wrapper from "../Wrapper/index"
+import Table from "../layout/Table"
 function TableHead(props) {
     return (
         

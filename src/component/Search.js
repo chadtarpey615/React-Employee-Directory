@@ -21,7 +21,7 @@ class Search extends Component {
     onChange = event => this.setState({})
     render() {
         return (
-            <form onSubmit={this.onSubmit}>
+            <form className="d-flex justify-content-center" onSubmit={this.onSubmit}>
                 <input 
                 
                 type="text"
