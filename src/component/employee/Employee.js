@@ -9,7 +9,8 @@ class Employee extends Component {
         sorted: employees.results,
         root: employees.results,
         employees: employees.results,
-        search: ""
+        search: "",
+
     }
 
     onChange = event => {
@@ -18,14 +19,31 @@ class Employee extends Component {
         let filteredArr = this.state.root.filter(filtered => filtered.name.first.includes(value) || filtered.name.last.includes(value) || filtered.dob.date.includes(value) || filtered.email.includes(value))
         //console.log(filteredArr);
         this.setState({ employees: filteredArr });
+
     }
 
-    onSort = (props) => {
-        console.log("hi")
+    onSort = () => {
         let sortArr = this.state.sorted
-        sortArr.sort();
-        //console.log(sortArr)
-    }
+
+        sortArr.sort(function (a,b) {
+            let lastNameA= a.name.last.toUpperCase();
+            let lastNameB = b.name.last.toUpperCase();
+            if (lastNameA < lastNameB) {
+                return -1;
+            }
+            if (lastNameA > lastNameB) {
+                return 1
+            }
+            return 0;
+
+        });
+        this.setState({ employees: sortArr})
+
+        }
+
+         
+      
+    
 
 
     render() {
@@ -72,5 +90,6 @@ class Employee extends Component {
     }
 
 }
+
 
 export default Employee;
