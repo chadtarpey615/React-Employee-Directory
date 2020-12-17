@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import employees from "../../utils/employees.json";
 import Table from "../../layout/Table";
+import Button from "../../component/button"
 
 class Employee extends Component {
 
     state = {
+        sorted: employees.results,
         root: employees.results,
         employees: employees.results,
         search: ""
@@ -12,15 +14,22 @@ class Employee extends Component {
 
     onChange = event => {
         let value = event.target.value
-        console.log(value)
+        //console.log(value)
         let filteredArr = this.state.root.filter(filtered => filtered.name.first.includes(value) || filtered.name.last.includes(value) || filtered.dob.date.includes(value) || filtered.email.includes(value))
-        console.log(filteredArr);
+        //console.log(filteredArr);
         this.setState({ employees: filteredArr });
+    }
+
+    onSort = (props) => {
+        console.log("hi")
+        let sortArr = this.state.sorted
+        sortArr.sort();
+        //console.log(sortArr)
     }
 
 
     render() {
-        console.log(this.state.employees)
+       // console.log(this.state.employees)
         return (
             <>
             <form className="d-flex justify-content-center" onSubmit={this.onSubmit}>
@@ -34,9 +43,10 @@ class Employee extends Component {
             <div>
                 <table className="table">
                     <thead className="thead-dark">
+
                         <tr>
                             <th scope="col">Image</th>
-                            <th scope="col">Name</th>
+                            <th scope="col">Name <button onClick={this.onSort}>Sort</button></th> 
                             <th scope="col">Phone</th>
                             <th scope="col">Email</th>
                             <th scope="col">Date Of Birth</th>
