@@ -13,7 +13,7 @@ class Employee extends Component {
     onChange = event => {
         let value = event.target.value
         console.log(value)
-        let filteredArr = this.state.root.filter(filtered => filtered.name.first.includes(value) || filtered.name.last.includes(value))
+        let filteredArr = this.state.root.filter(filtered => filtered.name.first.includes(value) || filtered.name.last.includes(value) || filtered.dob.date.includes(value) || filtered.email.includes(value))
         console.log(filteredArr);
         this.setState({ employees: filteredArr });
     }
