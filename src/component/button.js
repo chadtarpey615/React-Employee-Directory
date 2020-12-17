@@ -4,7 +4,7 @@
 // const  button = (props) => {
 //     return(
 //         <>
-//         <button onClick={props.onSort()}>Sort</button>
+//         <button onClick={props.onSort}>Sort</button>
 //         </>
 //     )
 // }

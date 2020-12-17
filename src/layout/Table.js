@@ -1,6 +1,5 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Wrapper from "../Wrapper/index";
 import "./table.css"
 
 function Table(props) {
