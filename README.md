@@ -66,7 +66,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ### `npm run build`
 
 
-- Visit   https://workout-fitness.herokuapp.com/
+- Visit   https://chadtarpey615.github.io/React-Employee-Directory
 - Google Chrome or any Web Browser
 ---
 ## References
