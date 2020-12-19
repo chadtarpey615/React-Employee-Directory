@@ -11,7 +11,7 @@ function Header() {
 
 const styleHeader = {
 backgroundColor: "navy",
-backgroundImage: 'url("../../public/images/office.webp")',
+//backgroundImage: 'url("../../public/images/office.webp")',
 backgroundPosition: 'center',
 backgroundRepeat: 'no-repeat',
 backgroundSize: "cover",
