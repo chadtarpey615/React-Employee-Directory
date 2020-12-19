@@ -1,22 +1,35 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./table.css"
+import TableHead from "./TableHeader";
 
 function Table(props) {
+    //console.log(props.employees[0].cell)
     return (
-        
-            <tbody>
-                <tr>
-                    <td><img alt={props.name} src={props.image}></img></td>
-                    <td>{props.title[0]} {props.title[1]}</td>
-                    <td>{props.phone}</td>
-                    <td><a href={props.email}>{props.email}</a></td>
-                    <td>{props.date}</td>
-                </tr>
-            </tbody>
-           
+        <div>
+            <table className="table">
+                <thead className="thead-dark">
+                    <TableHead onSort={props.onSort}/>
+                </thead>
+                <tbody>
+                    {props.employees.map((employee) => {
+                        return (
+                        <tr>
+                            <td><img alt={employee.name.first} src={employee.picture.thumbnail}></img></td>
+                            <td>{employee.name.first} {employee.name.last}</td>
+                            <td>{employee.cell}</td>
+                            <td><a href={employee.email}>{employee.email}</a></td>
+                            <td>{employee.dob.date}</td>
+                        </tr>
+                        )
+                    })}
+
+                </tbody>
+            </table>
+        </div>
     )
 }
+
 
 
 

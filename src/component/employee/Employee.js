@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import employees from "../../utils/employees.json";
 import Table from "../../layout/Table";
-import Button from "../../component/button"
+import Form from "../../layout/Form";
+import TableHead from "../../layout/TableHeader";
 
 class Employee extends Component {
 
@@ -9,7 +10,7 @@ class Employee extends Component {
         sorted: employees.results,
         root: employees.results,
         employees: employees.results,
-        search: "",
+        search: ""
 
     }
 
@@ -50,39 +51,8 @@ class Employee extends Component {
        // console.log(this.state.employees)
         return (
             <>
-            <form className="d-flex justify-content-center" onSubmit={this.onSubmit}>
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="search"
-                    onChange={this.onChange}
-                />
-            </form>
-            <div>
-                <table className="table">
-                    <thead className="thead-dark">
-                        <tr>
-                            <th scope="col">Image</th>
-                            <th scope="col">Name <button onClick={this.onSort}>Sort</button> </th> 
-                            <th scope="col">Phone</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Date Of Birth</th>
-                        </tr>
-                    </thead>
-                {this.state.employees.map(employee => {
-                    return (
-                        
-                        <Table
-                        image={employee.picture.thumbnail}
-                        title={[employee.name.first, employee.name.last]}
-                        phone={employee.cell}
-                        email={employee.email}
-                        date={employee.dob.date}
-                        />
-                        )
-                    })}
-                    </table>
-            </div>
+            <Form onChange={this.onChange} />
+            <Table employees={this.state.employees} onSort={this.onSort} />
             </>
         )
     }
