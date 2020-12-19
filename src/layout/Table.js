@@ -1,6 +1,5 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./table.css"
 import TableHead from "./TableHeader";
 
 function Table(props) {

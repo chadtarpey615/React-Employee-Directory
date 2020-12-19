@@ -1,4 +1,5 @@
-import Table from "../layout/Table"
+import React from "react";
+
 function TableHead(props) {
     return (
         

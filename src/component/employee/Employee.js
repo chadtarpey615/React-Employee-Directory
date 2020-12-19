@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import employees from "../../utils/employees.json";
 import Table from "../../layout/Table";
 import Form from "../../layout/Form";
-import TableHead from "../../layout/TableHeader";
 
 class Employee extends Component {
 
@@ -26,8 +25,8 @@ class Employee extends Component {
     onSort = () => {
         let sortArr = this.state.sorted
 
-        sortArr.sort(function (a,b) {
-            let lastNameA= a.name.last.toUpperCase();
+        sortArr.sort(function (a, b) {
+            let lastNameA = a.name.last.toUpperCase();
             let lastNameB = b.name.last.toUpperCase();
             if (lastNameA < lastNameB) {
                 return -1;
@@ -38,21 +37,21 @@ class Employee extends Component {
             return 0;
 
         });
-        this.setState({ employees: sortArr})
+        this.setState({ employees: sortArr })
 
-        }
+    }
 
-         
-      
-    
+
+
+
 
 
     render() {
-       // console.log(this.state.employees)
+        // console.log(this.state.employees)
         return (
             <>
-            <Form onChange={this.onChange} />
-            <Table employees={this.state.employees} onSort={this.onSort} />
+                <Form onChange={this.onChange} />
+                <Table employees={this.state.employees} onSort={this.onSort} />
             </>
         )
     }
